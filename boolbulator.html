@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BOOLbulator</title>
+<style>
+	body {
+		font-family: "Comic Sans MS", cursive, sans-serif;
+		font-size: 20px;
+		text-transform: uppercase;
+	} 
+	#Boolmageddon {
+		text-align: justify;
+	}
+	.yolo {
+		font-family: "Comic Sans MS", cursive, sans-serif;
+		font-size: 1rem;
+		display: block;
+		padding: 25px;
+		background-color: orange;
+		color: white;
+		border: 0;
+		float: left;
+		cursor: pointer;
+		margin-right: 1rem;
+	}
+	.forWho {
+		font-weight: bold;
+		color: orange;
+	}
+</style>
+<script>
+	function generateBool() {
+		var boolNo = 0, boolTarget = document.getElementById('Boolmageddon');
+		for (boolNo = 0; boolNo < 6*666; boolNo++) {
+			if(boolTarget != null){
+				boolTarget.innerHTML += (Math.random() >= 0.5) + " ";
+			}
+		}
+		boolTarget.innerHTML += '<span class="forWho">#Boolbulator #GoyelloCreative #september2018</span>';
+	}
+</script>
+</head>
+<body>
+	<button class="yolo" onclick="generateBool()">Do you want BOOL?</button>
+	<div id="Boolmageddon"></div>
+</body>
+</html>
